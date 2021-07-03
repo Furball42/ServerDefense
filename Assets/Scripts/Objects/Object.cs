@@ -11,4 +11,8 @@ public class Object : MonoBehaviour
     public int Damage;
     public float Speed;
     public int Level;
+
+    public virtual void SetSpeed (float speed){
+        Speed = speed;
+    }
 }

@@ -40,6 +40,7 @@
      <Compile Include="Assets\Scripts\Firewalls\Firewall.cs" />
      <Compile Include="Assets\Scripts\Firewalls\IFirewall.cs" />
      <Compile Include="Assets\Scripts\Firewalls\PicketFence.cs" />
+     <Compile Include="Assets\Scripts\GameController.cs" />
      <Compile Include="Assets\Scripts\Objects\Bullet.cs" />
      <Compile Include="Assets\Scripts\Objects\Object.cs" />
      <Compile Include="Assets\Scripts\Objects\ObjectType.cs" />

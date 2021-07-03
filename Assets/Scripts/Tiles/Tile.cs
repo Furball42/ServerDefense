@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Tile : MonoBehaviour
 {
-    public Tile PreviousTile;
-    public Tile NextTile;
+    public GameObject PreviousTile;
+    public GameObject NextTile;
     public bool IsHackerSpawn;
     public bool IsSysOpsSpawn;
     public bool CanHaveFirewall;

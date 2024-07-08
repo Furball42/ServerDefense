@@ -15,4 +15,8 @@ public class Bullet : Object
     {
         transform.Translate(Vector3.up * Time.deltaTime * mySpeed);
     }
+
+    private void OnCollisionEnter(Collision other) {
+        Destroy(gameObject);
+    }
 }

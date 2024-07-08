@@ -12,6 +12,8 @@ public class Object : MonoBehaviour
     public float Speed;
     public int Level;
 
+    public virtual void ActionOnHit() {}
+
     public virtual void SetSpeed (float speed){
         Speed = speed;
     }

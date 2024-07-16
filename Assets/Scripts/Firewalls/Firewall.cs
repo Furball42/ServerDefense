@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Firewall : MonoBehaviour
@@ -9,28 +10,29 @@ public class Firewall : MonoBehaviour
     public int HP;
     public int Cost;
 
+    private void OnCollisionEnter(Collision other) {        
+        ActionOnHit();
+    }
+
     public virtual void ActionOnHit() {}
 
     public virtual void ActionOnDestroyed() {}
 
-    public void TakeHPDamage(int damage, DamageType damageType) {
+    public void TakeHPDamage(int damage, DamageType[] damageTypes) {
         
-        var resisted = false;
-        Debug.Log("Damage Type: " + damageType.ToString());
+        var resisted = true;
+        var notResisted = damageTypes.Where(i => !ResistTypes.Contains(i)).ToArray();
 
-        foreach(var resist in ResistTypes)
-        {
-            Debug.Log("Resist Type: " + resist.ToString());
-            if (resist == damageType)
-            {
-                resisted = true;
-            }
+        if (notResisted.Count() > 0) {
+            resisted = false;
         }
-
+            
         if (!resisted){
+            Debug.Log("Not resisted");
             HP -= damage;
         }
-
-        Debug.Log("Is resisted: " + resisted.ToString());
+        else {
+            Debug.Log("Resisted");
+        }
     }
 }

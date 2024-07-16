@@ -126,9 +126,9 @@ MonoBehaviour:
   DamageTypes: 01000000
   Cost: 0
   Damage: 2
-  Speed: 0.25
+  Speed: 10
   Level: 1
-  mySpeed: 5
+  targetScript: {fileID: 0}
 --- !u!54 &85054136236100865
 Rigidbody:
   m_ObjectHideFlags: 0

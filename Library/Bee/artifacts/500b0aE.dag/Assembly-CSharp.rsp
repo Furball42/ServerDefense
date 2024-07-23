@@ -347,6 +347,7 @@
 "Assets/Scripts/Objects/Bullet.cs"
 "Assets/Scripts/Objects/Object.cs"
 "Assets/Scripts/Objects/ObjectType.cs"
+"Assets/Scripts/Server.cs"
 "Assets/Scripts/Tiles/Tile.cs"
 -langversion:9.0
 

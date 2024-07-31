@@ -4,8 +4,7 @@ using UnityEngine;
 
 public interface IFirewall : ISysOpObject
 {
-    string Name { get; set; }
     DamageType[] ResistTypes { get; set; }
-    int HP { get; set; }
-    int Cost { get; set; }
+    int MemoryCost { get; set; }
+    int CPUCost { get; set; }
 }

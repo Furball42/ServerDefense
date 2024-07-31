@@ -6,7 +6,8 @@ public class Server : MonoBehaviour, IServer, ISysOpObject
 {
     public string Name { get; set; }
     public int Integrity { get; set; }
-    public int CPU { get; set; }
+    public int CPUTotal { get; set; }
+    public int CPURefreshRate {get; set;} //should probably be a different type x / second
     public int MemoryUnits { get; set; }
 
     private void OnCollisionEnter(Collision other) {        

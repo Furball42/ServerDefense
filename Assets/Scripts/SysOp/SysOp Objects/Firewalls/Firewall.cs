@@ -7,8 +7,9 @@ public class Firewall : MonoBehaviour, IFirewall
 {
     public string Name { get; set; }
     public DamageType[] ResistTypes { get; set; }
-    public int HP { get; set; }
-    public int Cost { get; set; }
+    public int Integrity { get; set; }
+    public int MemoryCost { get; set; }
+    public int CPUCost { get; set; }
 
     private void OnCollisionEnter(Collision other) {        
         ActionOnHit();
@@ -28,14 +29,14 @@ public class Firewall : MonoBehaviour, IFirewall
         }
             
         if (!resisted){
-            HP -= damage;
-            Debug.Log(HP);
+            Integrity -= damage;
+            Debug.Log(Integrity);
         }
         else {
             Debug.Log("Resisted");
         }
 
-        if (HP <= 0) {
+        if (Integrity <= 0) {
             Debug.Log("Destroyed");
             Destroy(gameObject);
         }

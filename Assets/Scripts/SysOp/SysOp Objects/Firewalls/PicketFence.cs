@@ -6,8 +6,9 @@ public class PicketFence : Firewall
 {
     void Start() {        
         base.Name = "Picket Fence";
-        base.HP = 5;
-        base.Cost = 2;
+        base.Integrity = 5;
+        base.MemoryCost = 2;
+        base.CPUCost = 15;
         base.ResistTypes = new DamageType[] {DamageType.Electro};
     }
 }

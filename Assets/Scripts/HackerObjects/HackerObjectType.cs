@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum ObjectType
+public enum HackerObjecType
 {
     Packet,
     Trojan,    

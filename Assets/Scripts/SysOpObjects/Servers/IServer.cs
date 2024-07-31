@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface IServer : IObject
+public interface IServer : ISysOpObject
 {
     string Name { get; set; }
     int Integrity { get; set; }

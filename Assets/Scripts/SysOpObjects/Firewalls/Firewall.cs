@@ -19,8 +19,6 @@ public class Firewall : MonoBehaviour, IFirewall
     public virtual void ActionOnDestroyed() {}
 
     public void TakeHPDamage(int damage, DamageType[] damageTypes) {
-        
-        Debug.Log("Firewall - TakeHPDamage");
 
         var resisted = true;
         var notResisted = damageTypes.Where(i => !ResistTypes.Contains(i)).ToArray();
@@ -30,7 +28,6 @@ public class Firewall : MonoBehaviour, IFirewall
         }
             
         if (!resisted){
-            Debug.Log("Not resisted");
             HP -= damage;
             Debug.Log(HP);
         }
@@ -39,7 +36,7 @@ public class Firewall : MonoBehaviour, IFirewall
         }
 
         if (HP <= 0) {
-            Debug.Log("ded");
+            Debug.Log("Destroyed");
             Destroy(gameObject);
         }
     }

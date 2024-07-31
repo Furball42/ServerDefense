@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface IFirewall : IObject
+public interface IFirewall : ISysOpObject
 {
     string Name { get; set; }
     DamageType[] ResistTypes { get; set; }

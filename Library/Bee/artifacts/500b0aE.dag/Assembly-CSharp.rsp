@@ -344,10 +344,13 @@
 "Assets/Scripts/Firewalls/IFirewall.cs"
 "Assets/Scripts/Firewalls/PicketFence.cs"
 "Assets/Scripts/GameController.cs"
+"Assets/Scripts/IObject.cs"
 "Assets/Scripts/Objects/Bullet.cs"
 "Assets/Scripts/Objects/Object.cs"
 "Assets/Scripts/Objects/ObjectType.cs"
-"Assets/Scripts/Server.cs"
+"Assets/Scripts/Servers/IServer.cs"
+"Assets/Scripts/Servers/Level1.cs"
+"Assets/Scripts/Servers/Server.cs"
 "Assets/Scripts/Tiles/Tile.cs"
 -langversion:9.0
 

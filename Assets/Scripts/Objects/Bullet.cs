@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Bullet : Object
 {
-    public Firewall targetScript;
+    public IObject targetScript;
 
     void Start()
     {
@@ -20,7 +20,10 @@ public class Bullet : Object
         
         //TODO: should probably check if collision target is firewall
         if (other != null)  {
-            targetScript = (Firewall)other.gameObject.GetComponent("PicketFence");
+
+            var targetObject = other.gameObject;
+            targetScript = (IObject)other.gameObject.GetComponent<IObject>();
+            Debug.Log(targetScript);
             targetScript.TakeHPDamage(base.Damage, base.DamageTypes);
         }
         

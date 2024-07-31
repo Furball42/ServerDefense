@@ -10,7 +10,14 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SpawnObjectForHacker();
+        //SpawnObjectForHacker();
+    }
+
+    void Update() 
+    {
+        if (Input.GetKeyDown("space")) {
+            SpawnObjectForHacker();
+        }
     }
 
     public void SpawnObjectForHacker(){
@@ -18,8 +25,6 @@ public class GameController : MonoBehaviour
         var spawnObject = HackerSpawnTile.transform.GetChild(0);
         var spawnPosition = spawnObject.transform.position + new Vector3(0, 0.5f, 0);
 
-
-        Debug.Log(spawnPosition);
         var newObject = Instantiate(HackerObject, spawnPosition, Quaternion.Euler(0, 0, -90));
         newObject.transform.parent = HackerSpawnTile.transform;
     }

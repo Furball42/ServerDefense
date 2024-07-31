@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class Firewall : MonoBehaviour
+public class Firewall : MonoBehaviour, IFirewall
 {
-    public string Name;
-    public DamageType[] ResistTypes;
-    public int HP;
-    public int Cost;
+    public string Name { get; set; }
+    public DamageType[] ResistTypes { get; set; }
+    public int HP { get; set; }
+    public int Cost { get; set; }
 
     private void OnCollisionEnter(Collision other) {        
         ActionOnHit();
@@ -20,6 +20,8 @@ public class Firewall : MonoBehaviour
 
     public void TakeHPDamage(int damage, DamageType[] damageTypes) {
         
+        Debug.Log("Firewall - TakeHPDamage");
+
         var resisted = true;
         var notResisted = damageTypes.Where(i => !ResistTypes.Contains(i)).ToArray();
 
@@ -30,9 +32,15 @@ public class Firewall : MonoBehaviour
         if (!resisted){
             Debug.Log("Not resisted");
             HP -= damage;
+            Debug.Log(HP);
         }
         else {
             Debug.Log("Resisted");
+        }
+
+        if (HP <= 0) {
+            Debug.Log("ded");
+            Destroy(gameObject);
         }
     }
 }

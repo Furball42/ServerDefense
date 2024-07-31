@@ -440,6 +440,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4585986383599414071, guid: 7305dfa556cac0742ad737dfa0a47df5,
         type: 3}
+      propertyPath: HP
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4585986383599414071, guid: 7305dfa556cac0742ad737dfa0a47df5,
+        type: 3}
       propertyPath: ResistTypes.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -466,7 +471,7 @@ PrefabInstance:
     - target: {fileID: 4785952644805500681, guid: 7305dfa556cac0742ad737dfa0a47df5,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.003
+      value: 2.79
       objectReference: {fileID: 0}
     - target: {fileID: 4785952644805500681, guid: 7305dfa556cac0742ad737dfa0a47df5,
         type: 3}
@@ -594,10 +599,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Server
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -734609785946089512, guid: b1f241665b670a74894c35cfaa305c7b, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6135047540830804836, guid: b1f241665b670a74894c35cfaa305c7b,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2032785221}
   m_SourcePrefab: {fileID: 100100000, guid: b1f241665b670a74894c35cfaa305c7b, type: 3}
 --- !u!1 &1191083286 stripped
 GameObject:
@@ -711,6 +721,28 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 5641819105315785657}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2032785217 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6135047540830804836, guid: b1f241665b670a74894c35cfaa305c7b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1177826381}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2032785221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2032785217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e05b3db8a17a60848a620d21da8b8760, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: 
+  ResistTypes: 
+  HP: 5
+  Cost: 2
 --- !u!1001 &5641819105315785657
 PrefabInstance:
   m_ObjectHideFlags: 0

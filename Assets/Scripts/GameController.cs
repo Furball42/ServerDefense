@@ -15,9 +15,9 @@ public class GameController : MonoBehaviour
 
     void Update() 
     {
-        if (Input.GetKeyDown("space")) {
-            SpawnObjectForHacker();
-        }
+        // if (Input.GetKeyDown("space")) {
+        //     SpawnObjectForHacker();
+        // }
     }
 
     public void SpawnObjectForHacker(){
